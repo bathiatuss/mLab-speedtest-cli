@@ -45,10 +45,6 @@ To get started with this project, follow these steps:
     npm install
     ```
 
-4. **Set Up Environment Variables:**
-
-    Create a `.env` file in the root directory of your project and define the necessary environment variables.
-
 ## Usage
 
 You can run the following commands to perform speed test operations from the command line:
