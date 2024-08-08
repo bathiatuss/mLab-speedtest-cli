@@ -1,10 +1,9 @@
 const { runCommand } = require("./src/commands/index");
 
-//TODO: DONE write the cmd-related code here
-const args = process.argv.slice(2); // Komut satırı argümanlarını al
+const args = process.argv.slice(2);
 
 if (args.length === 0) {
-  console.error("No command provided. Please provide a command.");
+  console.error(`Warning`);
   process.exit(1);
 }
 
