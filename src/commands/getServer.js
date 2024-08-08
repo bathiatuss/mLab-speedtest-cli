@@ -1,7 +1,7 @@
-const { runCommand } = require("../controller/ndt7Service");
+const { runTest } = require("../controller/ndt7Service");
 
 function getServer() {
-  runCommand(["error", "serverChosen", "downloadMeasurement"]);
+  runTest(["error", "serverChosen", "downloadMeasurement"]);
 }
 
 module.exports = getServer;
