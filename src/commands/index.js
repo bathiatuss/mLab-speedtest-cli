@@ -5,13 +5,11 @@ const upload = require("../commands/upload");
 const showResult = require("../commands/showResults");
 
 function runCommand(args) {
-  // const args = process.argv.slice(2);
-
   switch (args) {
-    case "start-test":
+    case "run":
       startTest();
       break;
-    case "get-server":
+    case "server":
       getServer();
       break;
     case "download":
@@ -20,7 +18,7 @@ function runCommand(args) {
     case "upload":
       upload();
       break;
-    case "show-result":
+    case "results":
       showResult();
       break;
     default:

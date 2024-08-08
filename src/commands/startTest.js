@@ -1,7 +1,12 @@
 const { runTest } = require("../controller/ndt7Service");
 
 function startTest() {
-  runTest(["error", "downloadMeasurement"]);
+  runTest([
+    "error",
+    "serverChosen",
+    "downloadMeasurement",
+    "uploadMeasurement",
+  ]);
 }
 
-module.exports = download;
+module.exports = startTest;
