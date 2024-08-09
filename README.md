@@ -51,12 +51,12 @@ You can run the following commands to perform speed test operations from the com
 
 ### Commands
 
-- **Start Test (`startTest`):**
+- **CLI Helper (`helper`):**
 
-    Starts the speed test process.
+    Provides available commands. 
 
     ```bash
-    node main.js run
+    node main.js --help
     ```
 
 - **Get Server (`getServer`):**
@@ -64,23 +64,23 @@ You can run the following commands to perform speed test operations from the com
     Selects the server for testing.
 
     ```bash
-    node main.js server
+    node main.js -server
     ```
 
-- **Download Test (`download`):**
+- **Netword Download Speed Test (`download`):**
 
     Tests the download speed.
 
     ```bash
-    node main.js download
+    node main.js -download
     ```
 
-- **Upload Test (`upload`):**
+- **Network Upload Speed Test (`upload`):**
 
     Tests the upload speed.
 
     ```bash
-    node main.js upload
+    node main.js -upload
     ```
 
 - **Show Results (`showResults`):**
@@ -88,7 +88,15 @@ You can run the following commands to perform speed test operations from the com
     Displays the test results.
 
     ```bash
-    node main.js results
+    node main.js -results
+    ```
+
+- **Start Test (`startTest`):**
+
+    Starts the speed test process.
+
+    ```bash
+    node main.js -run
     ```
 
 ## Contributing
