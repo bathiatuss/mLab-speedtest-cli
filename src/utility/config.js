@@ -1,3 +1,5 @@
+const { logUpdater } = require("./logUpdater");
+
 class Config {
   dataPolicy = {
     userAcceptedDataPolicy: true,
@@ -17,13 +19,18 @@ class Config {
         Data: { ElapsedTime, NumBytes, MeanClientMbps },
       } = data;
       if (source === "client") {
-        console.log("Download measurement:");
-        console.log(`
+        //TODO: ${JSON.stringify(data)} for json
+        logUpdater(
+          `
+        Download measurement:
+
         Source: ${source}
         Elapsed Time: ${ElapsedTime}
         Timestamp: ${NumBytes}
         Download: ${MeanClientMbps}
-        `);
+        `,
+          1000
+        );
       }
     },
     uploadMeasurement: (data) => {
@@ -32,13 +39,17 @@ class Config {
         Data: { ElapsedTime, NumBytes, MeanClientMbps },
       } = data;
       if (source === "client") {
-        console.log("Upload measurement:");
-        console.log(`
+        logUpdater(
+          `
+        Download measurement:
+
         Source: ${source}
         Elapsed Time: ${ElapsedTime}
         Timestamp: ${NumBytes}
         Upload: ${MeanClientMbps}
-        `);
+        `,
+          1000
+        );
       }
     },
   };
