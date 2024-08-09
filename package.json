@@ -1,13 +1,16 @@
 {
   "name": "mlab-speed-test-cli",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Command-line interface for mLab speed test",
   "main": "main.js",
+  "bin": {
+    "mLab-speed-test": "./main.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Atakan Baltacı",
+  "license": "Apache-2.0",
   "dependencies": {
     "@m-lab/ndt7": "^0.0.6",
     "log-update": "^6.1.0"

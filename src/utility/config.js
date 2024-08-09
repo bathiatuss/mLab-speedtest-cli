@@ -19,17 +19,17 @@ class Config {
         Data: { ElapsedTime, NumBytes, MeanClientMbps },
       } = data;
       if (source === "client") {
-        //TODO: ${JSON.stringify(data)} for json
+        //TODO: ${JSON.stringify(data)} for json data
         logUpdater(
           `
-        Download measurement:
+        Download Measurement:
 
         Source: ${source}
         Elapsed Time: ${ElapsedTime}
         Timestamp: ${NumBytes}
         Download: ${MeanClientMbps}
         `,
-          1000
+          10
         );
       }
     },
@@ -41,7 +41,7 @@ class Config {
       if (source === "client") {
         logUpdater(
           `
-        Download measurement:
+        Upload Measurement:
 
         Source: ${source}
         Elapsed Time: ${ElapsedTime}
