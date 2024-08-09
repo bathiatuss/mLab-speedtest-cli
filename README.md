@@ -45,58 +45,66 @@ To get started with this project, follow these steps:
     npm install
     ```
 
+4. **Install Globally:**
+
+    To make the `mLab-speed-test` command available globally, run:
+
+    ```bash
+    npm install -g .
+    ```
+
 ## Usage
 
 You can run the following commands to perform speed test operations from the command line:
 
 ### Commands
 
-- **CLI Helper (`helper`):**
+- **Help (`--help`):**
 
-    Provides available commands. 
+    Shows available commands and usage instructions.
 
     ```bash
-    node main.js --help
+    mLab-speed-test --help
     ```
-
-- **Get Server (`getServer`):**
+    
+- **Get Server (`-server`):**
 
     Selects the server for testing.
 
     ```bash
-    node main.js -server
+    mLab-speed-test -server
     ```
 
-- **Netword Download Speed Test (`download`):**
+- **Download Test (`-download`):**
 
     Tests the download speed.
 
     ```bash
-    node main.js -download
+    mLab-speed-test -download
     ```
 
-- **Network Upload Speed Test (`upload`):**
+- **Upload Test (`-upload`):**
 
     Tests the upload speed.
 
     ```bash
-    node main.js -upload
-    ```
+    mLab-speed-test -upload
+    ```    
 
-- **Show Results (`showResults`):**
-
-    Displays the test results.
-
-    ```bash
-    node main.js -results
-    ```
-
-- **Start Test (`startTest`):**
+- **Start Test (`-run`):**
 
     Starts the speed test process.
 
     ```bash
-    node main.js -run
+    mLab-speed-test -run
+    ```
+
+- **Show Results (`-results`):**
+
+    Displays the test results.
+
+    ```bash
+    mLab-speed-test -results
     ```
 
 ## Contributing
