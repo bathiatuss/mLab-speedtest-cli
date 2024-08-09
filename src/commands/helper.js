@@ -1,25 +1,25 @@
 function helper() {
-  console.error(`
-    No command provided. Please provide a command.
-    
+  console.error(`    
     Available Commands:
+
     - ClI Helper (helper): Provides available commands.
-      Usage: node main.js --help
+      Usage: mLab-speed-test --help
     
       - Start Test (startTest): Starts the speed test process.
-      Usage: node main.js -run
+      Usage: mLab-speed-test -run
     
     - Get Server (getServer): Selects the server for testing.
-      Usage: node main.js -server
+      Usage: mLab-speed-test -server
     
     - Download Test (download): Tests the download speed.
-      Usage: node main.js -download
+      Usage: mLab-speed-test -download
     
     - Upload Test (upload): Tests the upload speed.
-      Usage: node main.js -upload
+      Usage: mLab-speed-test -upload
     
     - Show Results (showResults): Displays the test results.
-      Usage: node main.js -results
+      Usage: mLab-speed-test -results
+      
                                                           `);
 }
 
