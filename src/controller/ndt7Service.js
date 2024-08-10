@@ -11,12 +11,14 @@ function runTest(callbacks) {
     .test(config.dataPolicy, userCallbacks)
     .then((result) => {
       if (result === 0) {
-        console.log("Test compeleted successfully");
+        console.log("Network Test completed successfully"); //FIXME: command files not stopping after the test!
       } else {
-        console.log("Test failed with error code:", result);
+        console.log("Network Test failed with error code:", result);
       }
     })
-    .catch((error) => console.error("Test encountered an error:", error));
+    .catch((error) =>
+      console.error("Network Test encountered an error:", error)
+    );
 }
 
 module.exports = { runTest };

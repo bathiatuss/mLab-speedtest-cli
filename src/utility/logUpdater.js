@@ -3,8 +3,7 @@ async function logUpdater(data, time) {
   setInterval(() => {
     logUpdate.default(`${data}`);
   }, time);
-  clearInterval();
 }
-// Use .default because log-update is an ESM
+// Use .default while importing(log-update) because log-update is an ESM(ECMAScript Module)
 
 module.exports = { logUpdater };

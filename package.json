@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Atakan Baltacı",
+  "author": "Atakan Baltaci",
   "license": "Apache-2.0",
   "dependencies": {
     "@m-lab/ndt7": "^0.0.6",

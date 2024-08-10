@@ -1,5 +1,7 @@
 const { logUpdater } = require("./logUpdater");
 
+//FIXME: too many funcs. apply the DRY and Single Responsibility principle
+
 class Config {
   dataPolicy = {
     userAcceptedDataPolicy: true,
@@ -14,6 +16,8 @@ class Config {
       console.log(`Server location: ${city}, ${country}`);
     },
     downloadMeasurement: (data) => {
+      //TODO: pass somewhere(god knows) the source prop as a params
+      //TODO: check the Data props every second if they'r bigger than the previous ones
       const {
         Source: source,
         Data: { ElapsedTime, NumBytes, MeanClientMbps },
@@ -29,7 +33,7 @@ class Config {
         Timestamp: ${NumBytes}
         Download: ${MeanClientMbps}
         `,
-          10
+          15000
         );
       }
     },
