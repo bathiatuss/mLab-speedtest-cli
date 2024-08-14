@@ -1,23 +1,23 @@
+require("dotenv").config();
 const { errorCallback } = require("../callbacks/error");
 const { serverChosenCallback } = require("../callbacks/serverChosen");
 const { uploadMeasurementCallback } = require("../callbacks/uploadMeasurement");
-const { logUpdater } = require("./logUpdater");
 
-//FIXME: partially done; too many funcs. apply the DRY and Single Responsibility principle
+//FIXME: DONE, too many funcs. apply the DRY and SR principle
 
 class Config {
-  dataPolicy = {
-    userAcceptedDataPolicy: true,
-  };
-
   userCallbacks = {
     error: (err) => errorCallback(err),
     serverChosen: (server) => serverChosenCallback(server),
     downloadMeasurement: (data) => downloadMeasurementCallback(data),
-    //TODO: create files for every callback(especially for download and uploads) and call them here
+    uploadMeasurement: (data) => uploadMeasurementCallback(data),
     //TODO: pass somewhere(god knows) the source prop as a params
     //TODO: check the Data props every second if they'r bigger than the previous ones
-    uploadMeasurement: (data) => uploadMeasurementCallback(data),
+    //TODO: DONE, create files for every callback(especially for download and uploads) and call them here
+  };
+
+  dataPolicy = {
+    userAcceptedDataPolicy: process.env.DATA_POLICY,
   };
 }
 
