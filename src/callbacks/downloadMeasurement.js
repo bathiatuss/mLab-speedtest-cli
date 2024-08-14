@@ -1,4 +1,4 @@
-logUpdater = require("../utils/logUpdater");
+const { logUpdater } = require("../utility/logUpdater");
 
 function downloadMeasurementCallback(data) {
   const {

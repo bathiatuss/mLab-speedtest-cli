@@ -2,7 +2,7 @@ const ndt7 = require("@m-lab/ndt7");
 // Network Diagnostic Tool Protocol v7 2020-02-18
 
 const Config = require("../utility/config");
-const { getCallbacks } = require("../utility/getCallbacks");
+const { getCallbacks } = require("../callbacks/getCallbacks");
 
 function runTest(callbacks) {
   const config = Config; //use the imported(as "module.exports = new Config") config class

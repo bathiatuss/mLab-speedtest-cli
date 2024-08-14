@@ -1,6 +1,9 @@
 require("dotenv").config();
 const { errorCallback } = require("../callbacks/error");
 const { serverChosenCallback } = require("../callbacks/serverChosen");
+const {
+  downloadMeasurementCallback,
+} = require("../callbacks/downloadMeasurement");
 const { uploadMeasurementCallback } = require("../callbacks/uploadMeasurement");
 
 //FIXME: DONE, too many funcs. apply the DRY and SR principle
@@ -17,7 +20,7 @@ class Config {
   };
 
   dataPolicy = {
-    userAcceptedDataPolicy: process.env.DATA_POLICY,
+    userAcceptedDataPolicy: true,
   };
 }
 

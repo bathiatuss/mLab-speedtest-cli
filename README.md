@@ -29,29 +29,29 @@ To get started with this project, follow these steps:
 
 1. **Clone the Repository:**
 
-    ```bash
-    git clone https://github.com/bathiatuss/mLab-speed-test-cli.git
-    ```
+   ```bash
+   git clone https://github.com/bathiatuss/mLab-speed-test-cli.git
+   ```
 
 2. **Navigate to the Project Directory:**
 
-    ```bash
-    cd mLab-speed-test-cli
-    ```
+   ```bash
+   cd mLab-speed-test-cli
+   ```
 
 3. **Install Dependencies:**
 
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 4. **Install Globally:**
 
-    To make the `mLab-speed-test` command available globally, run:
+   To make the `mLab-speed-test` command available globally, run:
 
-    ```bash
-    npm install -g .
-    ```
+   ```bash
+   npm install -g .
+   ```
 
 ## Usage
 
@@ -59,53 +59,61 @@ You can run the following commands to perform speed test operations from the com
 
 ### Commands
 
-- **Help (`--help`):**
+- **Help (`--help, -h`):**
 
-    Shows available commands and usage instructions.
+  Shows available commands and usage instructions.
 
-    ```bash
-    mLab-speed-test --help
-    ```
-    
-- **Get Server (`-server`):**
+  ```bash
+  mLab-speed-test --help
+  mLab-speed-test -h
+  ```
 
-    Selects the server for testing.
+- **Get Server (`-server, -s`):**
 
-    ```bash
-    mLab-speed-test -server
-    ```
+  Selects the most efficient server for testing.
 
-- **Download Test (`-download`):**
+  ```bash
+  mLab-speed-test -server
+  mLab-speed-test -s
+  ```
 
-    Tests the download speed.
+- **Download Test (`-download, -d`):**
 
-    ```bash
-    mLab-speed-test -download
-    ```
+  Tests the download speed.
 
-- **Upload Test (`-upload`):**
+  ```bash
+  mLab-speed-test -download
+  mLab-speed-test -d
+  ```
 
-    Tests the upload speed.
+- **Upload Test (`-upload, -u`):**
 
-    ```bash
-    mLab-speed-test -upload
-    ```    
+  Tests the upload speed.
 
-- **Start Test (`-run`):**
+  ```bash
+  mLab-speed-test -upload
+  mLab-speed-test -u
+  ```
 
-    Starts the speed test process.
+- **Start Test (`-run, -r`):**
 
-    ```bash
-    mLab-speed-test -run
-    ```
+  Starts the speed test process for download speed, upload speed, most efficient server and network latency.
 
-- **Show Results (`-results`):**
+  ```bash
+  mLab-speed-test -run
 
-    Displays the test results.
+  mLab-speed-test -r
+  ```
 
-    ```bash
-    mLab-speed-test -results
-    ```
+- **Show Results (`-results [params], -res [params]`):**
+
+  Displays the latest test results. "params" is optional.
+
+  ```bash
+  mLab-speed-test -results
+
+  mLab-speed-test -res 5
+  ```
 
 ## Contributing
 
@@ -114,9 +122,9 @@ To contribute to this project, please follow these steps:
 1. **Fork the Repository and Clone It to Your Local Machine.**
 2. **Create a New Branch:**
 
-    ```bash
-    git checkout -b feature/feature-name
-    ```
+   ```bash
+   git checkout -b feature/feature-name
+   ```
 
 3. **Make Your Changes and Test Them.**
 4. **Commit Your Changes and Open a Pull Request.**

@@ -1,5 +1,5 @@
 //that func returns the "wanted"(by commands files) callbacks.
-const Config = require("./config");
+const Config = require("../utility/config");
 
 function getCallbacks(callbacks = []) {
   const config = Config;
