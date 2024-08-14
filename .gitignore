@@ -2,3 +2,5 @@ node_modules/
 diagnosis/
 .vscode/
 .env
+commit-guide.md
+prensibles-of-programming.md

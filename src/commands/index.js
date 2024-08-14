@@ -9,28 +9,34 @@ const { helper } = require("./helper");
 //run, download, upload, server, showResults
 //run: starts the network testing and gives all network data(upload,download,ping,server)
 //download-upload [pass parameter(client,server)]: starts the download test with detailed server and client data.
-//help: add -h, --help
+//DONE help: add -h, --help
 //results: show the results of the last test
 //pass params to results: as num. show "last ${number} test"
 
 function runCommand(args) {
   switch (args) {
-    case "-run":
+    case "--run":
+    case "-r":
       startTest();
       break;
-    case "-server":
+    case "--server":
+    case "-s":
       getServer();
       break;
-    case "-download":
+    case "--download":
+    case "-d":
       download();
       break;
     case "--help":
+    case "-h":
       helper();
       break;
-    case "-upload":
+    case "--upload":
+    case "-u":
       upload();
       break;
-    case "-results":
+    case "--results":
+    case "-res":
       showResult();
       break;
     default:
