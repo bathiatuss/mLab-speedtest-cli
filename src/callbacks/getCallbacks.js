@@ -1,12 +1,11 @@
 //that func returns the "wanted"(by commands files) callbacks.
-const Config = require("../utility/config");
+const { userCallbacks } = require("../controller/callbackController");
 
 function getCallbacks(callbacks = []) {
-  const config = Config;
   const selectedCallbacks = {};
   callbacks.forEach((callback) => {
-    if (config.userCallbacks[callback]) {
-      selectedCallbacks[callback] = config.userCallbacks[callback];
+    if (userCallbacks[callback]) {
+      selectedCallbacks[callback] = userCallbacks[callback];
     }
   });
   return selectedCallbacks;

@@ -3,21 +3,22 @@ const { logUpdater } = require("../utility/logUpdater");
 function downloadMeasurementCallback(data) {
   const {
     Source: source,
-    Data: { ElapsedTime, NumBytes, MeanClientMbps },
+    Data: { ElapsedTime = 0, NumBytes = 0, MeanClientMbps = 0 },
   } = data;
   if (source === "client") {
-    //TODO: ${JSON.stringify(data)} for json data
     logUpdater(
       `
-    Download Measurement:
+      Download Measurement:
 
-    Source: ${source}
-    Elapsed Time: ${ElapsedTime}
-    Timestamp: ${NumBytes}
-    Download: ${MeanClientMbps}
+      Source: ${source}
+      Elapsed Time: ${ElapsedTime}
+      Timestamp: ${NumBytes}
+      Download: ${MeanClientMbps}
     `,
-      15000
-    ); //TODO: add a timer(milliseconds) and two veriables as "startTime" and "finishTime"
+      50
+    );
+    //TODO: add a timer(milliseconds) and two variables as "startTime" and "finishTime"
+    //FIXME: OR just monitor the elapsed time!
   }
 }
 

@@ -1,6 +1,6 @@
 async function logUpdater(data, time) {
   const logUpdate = await import("log-update");
-  setInterval(() => {
+  setTimeout(() => {
     logUpdate.default(`${data}`);
   }, time);
 }

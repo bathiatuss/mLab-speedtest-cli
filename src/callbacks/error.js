@@ -1,7 +1,7 @@
 const { helper } = require("../commands/helper");
 
 function errorCallback(error) {
-  console.error("Error:", error);
+  console.error("Callback Error:", error);
   helper();
 }
 

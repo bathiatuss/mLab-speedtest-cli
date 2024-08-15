@@ -1,8 +1,12 @@
 function serverChosenCallback(server) {
   const {
+    machine,
     location: { city, country },
   } = server;
-  console.log(`Server location: ${city}, ${country}`);
+  console.log(
+    `\nServer Discovered!\n\nMost Efficient Server: ${city}, ${country}\n\nVirtual Machine: ${machine}\n`
+  );
+  process.exit(0);
 }
 
 module.exports = { serverChosenCallback };

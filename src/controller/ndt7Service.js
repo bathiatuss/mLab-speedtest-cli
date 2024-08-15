@@ -1,15 +1,14 @@
 const ndt7 = require("@m-lab/ndt7");
 // Network Diagnostic Tool Protocol v7 2020-02-18
 
-const Config = require("../utility/config");
+const { dataPolicy } = require("../utility/config");
 const { getCallbacks } = require("../callbacks/getCallbacks");
 
 function runTest(callbacks) {
-  const config = Config; //use the imported(as "module.exports = new Config") config class
   const userCallbacks = getCallbacks(callbacks);
 
   return ndt7
-    .test(config.dataPolicy, userCallbacks)
+    .test(dataPolicy, userCallbacks)
     .then((result) => {
       if (result === 0) {
         console.log("Network Test completed successfully"); //FIXME: command files not stopping after the test!
@@ -23,3 +22,6 @@ function runTest(callbacks) {
 }
 
 module.exports = { runTest };
+
+//use the imported(as "module.exports = new Config") config class
+//old code: const config = new Config();
