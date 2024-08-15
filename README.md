@@ -47,7 +47,7 @@ To get started with this project, follow these steps:
 
 4. **Install Globally:**
 
-   To make the `mLab-speed-test` command available globally, run:
+   To make the `mlab-speed-test` command available globally, run:
 
    ```bash
    npm install -g .
@@ -64,8 +64,8 @@ You can run the following commands to perform speed test operations from the com
   Shows available commands and usage instructions.
 
   ```bash
-  mLab-speed-test --help
-  mLab-speed-test -h
+  mlab-speed-test --help
+  mlab-speed-test -h
   ```
 
 - **Get Server (`-server, -s`):**
@@ -73,8 +73,8 @@ You can run the following commands to perform speed test operations from the com
   Selects the most efficient server for testing.
 
   ```bash
-  mLab-speed-test -server
-  mLab-speed-test -s
+  mlab-speed-test -server
+  mlab-speed-test -s
   ```
 
 - **Download Test (`-download, -d`):**
@@ -82,8 +82,8 @@ You can run the following commands to perform speed test operations from the com
   Tests the download speed.
 
   ```bash
-  mLab-speed-test -download
-  mLab-speed-test -d
+  mlab-speed-test -download
+  mlab-speed-test -d
   ```
 
 - **Upload Test (`-upload, -u`):**
@@ -91,8 +91,8 @@ You can run the following commands to perform speed test operations from the com
   Tests the upload speed.
 
   ```bash
-  mLab-speed-test -upload
-  mLab-speed-test -u
+  mlab-speed-test -upload
+  mlab-speed-test -u
   ```
 
 - **Start Test (`-run, -r`):**
@@ -100,9 +100,9 @@ You can run the following commands to perform speed test operations from the com
   Starts the speed test process for download speed, upload speed, most efficient server and network latency.
 
   ```bash
-  mLab-speed-test -run
+  mlab-speed-test -run
 
-  mLab-speed-test -r
+  mlab-speed-test -r
   ```
 
 - **Show Results (`-results [params], -res [params]`):**
@@ -110,9 +110,9 @@ You can run the following commands to perform speed test operations from the com
   Displays the latest test results. "params" is optional.
 
   ```bash
-  mLab-speed-test -results
+  mlab-speed-test -results
 
-  mLab-speed-test -res 5
+  mlab-speed-test -res 5
   ```
 
 ## Contributing
