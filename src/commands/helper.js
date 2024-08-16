@@ -23,4 +23,4 @@ function helper() {
                                                           `);
 }
 
-module.exports = { helper };
+module.exports = helper;

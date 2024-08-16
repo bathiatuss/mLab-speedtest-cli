@@ -11,7 +11,7 @@ function runTest(callbacks) {
     .test(dataPolicy, userCallbacks)
     .then((result) => {
       if (result === 0) {
-        console.log("Network Test completed successfully"); //FIXME: command files not stopping after the test!
+        console.log("Network Test completed successfully"); //FIXME: PARTIALLY FIXED - command files not stopping after the test!
       } else {
         console.log("Network Test failed with error code:", result);
       }
@@ -21,7 +21,7 @@ function runTest(callbacks) {
     );
 }
 
-module.exports = { runTest };
+module.exports = runTest;
 
 //use the imported(as "module.exports = new Config") config class
 //old code: const config = new Config();

@@ -4,6 +4,7 @@ async function logUpdater(data, time) {
     logUpdate.default(`${data}`);
   }, time);
 }
-// Use .default while importing(log-update) because log-update is an ESM(ECMAScript Module)
+// use .default to access the default export of the module
+// log-update is an ESM(ECMAScript Module)
 
-module.exports = { logUpdater };
+module.exports = logUpdater;

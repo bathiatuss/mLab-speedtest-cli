@@ -1,18 +1,18 @@
-const { logUpdater } = require("../utility/logUpdater");
+const logUpdater = require("../utility/logUpdater");
 
 function uploadMeasurementCallback(data) {
   const {
-    Source: source,
+    Source,
     Data: { ElapsedTime = 0, NumBytes = 0, MeanClientMbps = 0 },
-    //previous network test results effects the current test results
-    //initial values setting to 0 every test!!
+    //TODO: previous network test results effects the current test results
+    //initialize the values setting to 0 every test!!
   } = data;
-  if (source === "client") {
+  if (Source === "client") {
     logUpdater(
       `
       Upload Measurement:
 
-      Source: ${source}
+      Source: ${Source}
       Elapsed Time: ${ElapsedTime}
       Timestamp: ${NumBytes}
       Upload: ${MeanClientMbps / 10}
