@@ -3,22 +3,22 @@ function helper() {
     Available Commands:
 
     - ClI Helper (helper): Provides available commands.
-      Usage: mLab-speed-test --help, -h
+      Usage: mlab-speed-test --help, -h
     
       - Start Test (startTest): Starts the speed test process.
-      Usage: mLab-speed-test -run, -r
+      Usage: mlab-speed-test -run, -r
     
     - Get Server (getServer): Selects the server for testing.
-      Usage: mLab-speed-test -server, -s
+      Usage: mlab-speed-test -server, -s
     
     - Download Test (download): Tests the download speed.
-      Usage: mLab-speed-test -download, -d
+      Usage: mlab-speed-test -download, -d
     
     - Upload Test (upload): Tests the upload speed.
-      Usage: mLab-speed-test -upload, -u
+      Usage: mlab-speed-test -upload, -u
     
     - Show Results (showResults): Displays the test results.
-      Usage: mLab-speed-test -results, -res [params]
+      Usage: mlab-speed-test -results [params], -res [params]
       
                                                           `);
 }
