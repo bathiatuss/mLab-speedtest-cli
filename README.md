@@ -8,7 +8,7 @@
 
 **mLab Speed Test CLI** is a Node.js application that provides a command-line interface (CLI) for accessing the Measurement Lab (M-Lab) speed testing system developed by Google Inc. This tool allows users to test their internet speed and view the results.
 
-## Table of Contents
+## Contents
 
 - [Features](#features)
 - [Installation](#installation)
@@ -17,13 +17,13 @@
 - [Contributing](#contributing)
 - [License](#license)
 
-## Features
+## 🎉 Features
 
 - **Internet Speed Testing**: Tests download and upload speeds, and ping times.
 - **Command-Line Interface**: Performs test operations through various commands.
 - **Results Viewing**: Displays test results immediately.
 
-## Installation
+## 🚀 Installation
 
 To get started with this project, follow these steps:
 
@@ -53,7 +53,7 @@ To get started with this project, follow these steps:
    npm install -g .
    ```
 
-## Usage
+## 📋 Usage
 
 You can run the following commands to perform speed test operations from the command line:
 
@@ -115,7 +115,7 @@ You can run the following commands to perform speed test operations from the com
   mlab-speed-test -res 5
   ```
 
-## Contributing
+## 👏 Contributing
 
 To contribute to this project, please follow these steps:
 
@@ -129,7 +129,7 @@ To contribute to this project, please follow these steps:
 3. **Make Your Changes and Test Them.**
 4. **Commit Your Changes and Open a Pull Request.**
 
-## License
+## 📄 License
 
 This project is licensed under the [Apache-2.0 License](LICENSE).
 
