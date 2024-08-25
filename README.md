@@ -68,7 +68,7 @@ You can run the following commands to perform speed test operations from the com
   mlab-speed-test -h
   ```
 
-- **Get Server (`-server, -s`):**
+- **Get Server (`--server, -s`):**
 
   Selects the most efficient server for testing.
 
@@ -77,40 +77,40 @@ You can run the following commands to perform speed test operations from the com
   mlab-speed-test -s
   ```
 
-- **Download Test (`-download, -d`):**
+- **Download Test (`--download, -d`):**
 
   Tests the download speed.
 
   ```bash
-  mlab-speed-test -download
+  mlab-speed-test --download
   mlab-speed-test -d
   ```
 
-- **Upload Test (`-upload, -u`):**
+- **Upload Test (`--upload, -u`):**
 
   Tests the upload speed.
 
   ```bash
-  mlab-speed-test -upload
+  mlab-speed-test --upload
   mlab-speed-test -u
   ```
 
-- **Start Test (`-run, -r`):**
+- **Start Test (`--run, -r`):**
 
   Starts the speed test process for download speed, upload speed, most efficient server and network latency.
 
   ```bash
-  mlab-speed-test -run
+  mlab-speed-test --run
 
   mlab-speed-test -r
   ```
 
-- **Show Results (`-results [params], -res [params]`):**
+- **Show Results (`--results [params], -res [params]`):**
 
   Displays the latest test results. "params" is optional.
 
   ```bash
-  mlab-speed-test -results
+  mlab-speed-test --results
 
   mlab-speed-test -res 5
   ```
