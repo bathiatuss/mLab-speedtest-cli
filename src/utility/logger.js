@@ -1,1 +1,1 @@
-//FIXME: create here logger file for logging latest test results!
+//TODO: Create here logger file for logging test results on local machine!

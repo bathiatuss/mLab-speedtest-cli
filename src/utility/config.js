@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const dataPolicy = {
   userAcceptedDataPolicy: true,
-  //TODO: NO ANSWER FOR NOW - check out your issue on dotenv repo for boolean expressions in .env files
+  //FIXME: NOT NECESSARY FOR DEV - ASK USER FOR PERMISSION TO COLLECT DATA ON PRODUCTION!
 };
 
 module.exports = { dataPolicy };

@@ -1,5 +1,3 @@
-// const ResultController = require("../controller/ResultControllerClass");
-
 const startTest = require("../commands/startTest");
 const getServer = require("../commands/getServer");
 const download = require("../commands/download");
@@ -15,9 +13,8 @@ const helper = require("./helper");
 //results: show the results of the last test
 //pass params to results: as num. show "last ${number} test"
 
-function runCommand(args, extraArgs) {
-  // ResultController.loadResultsFromLogs();
-
+async function runCommand(args, extraArgs) {
+  //TODO: LATER - add extraArgs to funcs if its necessary
   switch (args) {
     case "--run":
     case "-r":
@@ -25,7 +22,7 @@ function runCommand(args, extraArgs) {
       break;
     case "--server":
     case "-s":
-      getServer();
+      getServer(extraArgs);
       break;
     case "--download":
     case "-d":

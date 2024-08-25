@@ -1,5 +1,5 @@
 //that func returns the "wanted"(by commands files) callbacks.
-const { userCallbacks } = require("../controller/callbackController");
+const { userCallbacks } = require("./callbackController");
 
 function getCallbacks(callbacks = []) {
   const selectedCallbacks = {};

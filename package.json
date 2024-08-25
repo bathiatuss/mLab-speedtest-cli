@@ -15,5 +15,8 @@
     "@m-lab/ndt7": "^0.0.6",
     "dotenv": "^16.4.5",
     "log-update": "^6.1.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

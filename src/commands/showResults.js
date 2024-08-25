@@ -1,6 +1,6 @@
-function showResult(extraArgs) {
+function showResult(extraArgs = 1) {
   //TODO: LATER - use "number" params to show the last ${number} results
-  console.log("Work on progress...");
+  console.log("Work in progress...");
   console.log("Purpose of the func is: showing last results to user");
   console.log(`The last ${extraArgs} results are:`);
   //TODO: take "stringified" data from callbackController.js OR

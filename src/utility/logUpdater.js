@@ -5,6 +5,6 @@ async function logUpdater(data, time) {
   }, time);
 }
 // use .default to access the default export of the module
-// log-update is an ESM(ECMAScript Module)
+// import log-update dynamically because it is an ESM(ECMAScript Module)
 
 module.exports = logUpdater;

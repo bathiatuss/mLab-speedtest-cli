@@ -1,4 +1,4 @@
-const runTest = require("../controller/ndt7Service");
+const runTest = require("../controllers/ndt7Service");
 
 function download() {
   runTest(["error", "downloadMeasurement"]);
