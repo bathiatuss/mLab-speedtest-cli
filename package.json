@@ -1,6 +1,6 @@
 {
   "name": "mLab-speed-test-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Command-line interface for mLab speed test",
   "main": "main.js",
   "bin": {
@@ -13,6 +13,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "@m-lab/ndt7": "^0.0.6",
+    "chalk": "^4.1.2",
     "dotenv": "^16.4.5",
     "log-update": "^6.1.0"
   },

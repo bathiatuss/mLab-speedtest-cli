@@ -1,5 +1,6 @@
 const logUpdater = require("../utility/logUpdater");
 const loader = require("./loadingAnimation");
+const { error, header, title, result, success } = require("./chalk");
 
 function dataFormatter(data, type) {
   const types = ["full", "download", "upload", "server", "results"];
@@ -20,8 +21,10 @@ function dataFormatter(data, type) {
       break;
     case types[4]:
       return "Results Work In Progress";
-    default:
-      return "Unknown Test Type on Formatter";
+    default: {
+      console.log(error("Unknown Test Type on Data Formatter"));
+      process.exit(1);
+    }
   }
 }
 
@@ -41,13 +44,12 @@ function downloadFormatter(data, type) {
   if (data.Source == "client") {
     logUpdater(
       `
-      NDT7 Network Diagnosis ${animation}
+      ${header(`NDT7 Network Diagnosis ${animation}`)} 
 
-      Source\t: ${this.Source}
-      Time\t: ${this.ElapsedTime} Seconds
-      ${type}\t: ${this.MeanClientMbps} Mbps
-      Transfer\t: ${this.NumBytes} Bytes
-
+      ${title("Source")} ${result("Client", "Response")}
+      ${title("Time")} ${result(this.ElapsedTime, "Seconds")} 
+      ${title(type)} ${result(this.MeanClientMbps, "Mbps")} 
+      ${title("Transfer")} ${result(this.NumBytes, "Bytes")} 
 `,
       50
     );
@@ -65,17 +67,17 @@ function uploadFormatter(data, type) {
   this.ElapsedTime = (Number(_data.ElapsedTime) || 0).toFixed(2) || animation;
   this.NumBytes = _data.NumBytes || animation;
   this.MeanClientMbps =
-    (Number(_data.MeanClientMbps) || 0).toFixed(2) || animation;
+    (Number(_data.MeanClientMbps / 10) || 0).toFixed(2) || animation;
 
   if (data.Source == "client") {
     logUpdater(
       `
-      NDT7 Network Diagnosis ${animation}
+      ${header(`NDT7 Network Diagnosis ${animation}`)} 
 
-      Source: ${data.Source}
-      Time: ${_data.ElapsedTime} Seconds
-      ${type} : ${_data.MeanClientMbps / 10} Mbps
-      Transfer: ${_data.NumBytes} Bytes
+      ${title("Source")} ${result("Client", "Response")}
+      ${title("Time")} ${result(this.ElapsedTime, "Seconds")} 
+      ${title(type)} ${result(this.MeanClientMbps, "Mbps")} 
+      ${title("Transfer")} ${result(this.NumBytes, "Bytes")} 
       `,
       50
     );
@@ -88,9 +90,13 @@ function serverFormatter(data) {
   const location = data.location;
 
   console.log(
-    `\nServer Discovered!\n\nMost Efficient Server: ${location.city}, ${location.country}\n\nVirtual Machine: ${data.machine}\n`
+    `\n      ${success("Server Discovered!")}\n\n      ${title(
+      "Server Location"
+    )} ${result(location.city, ",")} ${result(
+      location.country
+    )}\n\n      ${title("Virtual Machine")} ${result(data.machine)}\n`
   );
-  process.exit(0); //KILLS the process after the console log!
+  // process.exit(0); //KILLS the process after the console log!
 }
 
 function fullNetworkFormatter(data) {
@@ -112,5 +118,4 @@ function fullNetworkFormatter(data) {
   }
 }
 
-//TODO: NO NEED - use ElapsedTime LATER INSTEAD - add a timer(milliseconds) and two variables as "startTime" and "finishTime"
 module.exports = dataFormatter;

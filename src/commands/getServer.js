@@ -1,4 +1,4 @@
-const runTest = require("../controllers/ndt7Service");
+const runTest = require("../services/ndt7Service");
 
 function getServer(extraArgs) {
   //TODO: Show the discovered server list with the extraArgs

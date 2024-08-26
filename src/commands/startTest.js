@@ -1,11 +1,13 @@
-const runTest = require("../controllers/ndt7Service");
-const helper = require("../commands/helper");
+const runTest = require("../services/ndt7Service");
 
 function startTest() {
-  console.log("Work in progress...");
-  helper();
-
-  // runTest(["error", "fullNetworkDiagnosis"]); //TODO: may need other callbacks too
+  //TODO: USE ndt7UploadService.js and downloadService for FULL TEST
+  runTest([
+    "error",
+    "serverChosen",
+    "downloadMeasurement",
+    "uploadMeasurement",
+  ]);
 }
 
 module.exports = startTest;
