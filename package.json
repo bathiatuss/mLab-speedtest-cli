@@ -1,10 +1,10 @@
 {
-  "name": "mLab-speed-test-cli",
+  "name": "mLab-speedtest-cli",
   "version": "1.0.2",
   "description": "Command-line interface for mLab speed test",
   "main": "main.js",
   "bin": {
-    "mlab-speed-test": "./main.js"
+    "mlab-speedtest": "./main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
