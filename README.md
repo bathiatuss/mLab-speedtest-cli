@@ -2,7 +2,7 @@
     <img src="https://cdn-1.webcatalog.io/catalog/m-lab-speed-test/m-lab-speed-test-icon-filled-256.webp?v=1714775025850" alt="Measurement Lab Logo" width="200" style="margin: 10px;"/>
     <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" alt="Google Inc." width="200" style="margin: 10px;"/>
     <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js Logo" width="200" style="margin: 10px;"/>
-    <img src="https://www.measurementlab.net/images/home/logos/cloudflare.png" alt="Cloudflare Logo" width="200" style="margin: 10px;"/>
+    <img src="https://www.measurementlab.net/images/home/logos/cloudflare.png" alt="Cloudflare Logo" width="170" style="margin: 10px;"/>
 </div>
 
 # mLab Speed Test CLI
