@@ -30,13 +30,13 @@ To get started with this project, follow these steps:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/bathiatuss/mLab-speed-test-cli.git
+   git clone https://github.com/bathiatuss/mLab-speedtest-cli.git
    ```
 
 2. **Navigate to the Project Directory:**
 
    ```bash
-   cd mLab-speed-test-cli
+   cd mLab-speedtest-cli
    ```
 
 3. **Install Dependencies:**
@@ -47,7 +47,7 @@ To get started with this project, follow these steps:
 
 4. **Install Globally:**
 
-   To make the `mlab-speed-test` command available globally, run:
+   To make the `mlab-speedtest` command available globally, run:
 
    ```bash
    npm install -g .
@@ -64,8 +64,8 @@ You can run the following commands to perform speed test operations from the com
   Shows available commands and usage instructions.
 
   ```bash
-  mlab-speed-test --help
-  mlab-speed-test -h
+  mlab-speedtest --help
+  mlab-speedtest -h
   ```
 
 - **Get Server (`--server, -s`):**
@@ -73,8 +73,8 @@ You can run the following commands to perform speed test operations from the com
   Selects the most efficient server for testing.
 
   ```bash
-  mlab-speed-test -server
-  mlab-speed-test -s
+  mlab-speedtest -server
+  mlab-speedtest -s
   ```
 
 - **Download Test (`--download, -d`):**
@@ -82,8 +82,8 @@ You can run the following commands to perform speed test operations from the com
   Tests the download speed.
 
   ```bash
-  mlab-speed-test --download
-  mlab-speed-test -d
+  mlab-speedtest --download
+  mlab-speedtest -d
   ```
 
 - **Upload Test (`--upload, -u`):**
@@ -91,8 +91,8 @@ You can run the following commands to perform speed test operations from the com
   Tests the upload speed.
 
   ```bash
-  mlab-speed-test --upload
-  mlab-speed-test -u
+  mlab-speedtest --upload
+  mlab-speedtest -u
   ```
 
 - **Start Test (`--run, -r`):**
@@ -100,9 +100,9 @@ You can run the following commands to perform speed test operations from the com
   Starts the speed test process for download speed, upload speed, most efficient server and network latency.
 
   ```bash
-  mlab-speed-test --run
+  mlab-speedtest --run
 
-  mlab-speed-test -r
+  mlab-speedtest -r
   ```
 
 - **Show Results (`--results [params], -res [params]`):**
@@ -110,9 +110,9 @@ You can run the following commands to perform speed test operations from the com
   Displays the latest test results. "params" is optional.
 
   ```bash
-  mlab-speed-test --results
+  mlab-speedtest --results
 
-  mlab-speed-test -res 5
+  mlab-speedtest -res 5
   ```
 
 ## 👏 Contributing
