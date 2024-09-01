@@ -11,18 +11,33 @@
 
 ## Contents
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Commands](#commands)
-- [Contributing](#contributing)
-- [License](#license)
+- [🎉 Features](#features)
+- [🚀 Installation](#installation)
+- [📋 Usage](#usage)
+- [📝 Commands](#usage)
+- [📜 Upcoming Features](#upcoming-features)
+- [👏 Contributing](#contributing)
+- [📄 License](#license)
 
 ## 🎉 Features
 
-- **Internet Speed Testing**: Tests download and upload speeds, and ping times.
-- **Command-Line Interface**: Performs test operations through various commands.
-- **Results Viewing**: Displays test results immediately.
+*   **Developer-Friendly**  
+    Open source and customizable, tailored for developers seeking flexibility.
+    
+*   **User-Friendly CLI**  
+    Enjoy a simple and intuitive command-line interface for seamless network testing.
+    
+*   **Quick Speed Tests**  
+    Perform fast download and upload speed measurements with minimal configuration.
+    
+*   **Automatic Server Selection**  
+    Effortlessly selects the optimal server for accurate results.
+    
+*   **Flexible Commands**  
+    Use versatile commands to execute different tests and view results.
+    
+*   **Instant Results**  
+    Get immediate feedback on test results directly in the terminal.
 
 ## 🚀 Installation
 
@@ -116,6 +131,20 @@ You can run the following commands to perform speed test operations from the com
 
   mlab-speedtest -res 5
   ```
+
+## 📜 Upcoming Features
+
+*   **API Integration in v2.0.0**  
+    Version 2.0.0 will introduce an API for developers to retrieve network speed and server data with a single line of code.
+
+*   **Enhanced Performance**  
+    Significant improvements in performance to ensure faster and more efficient testing.
+
+*   **Increased Consistency**  
+    Improved consistency in test results to provide more reliable data across various network conditions.
+
+*   **Faster Test Speeds**  
+    Optimizations to reduce test execution time, enabling quicker and more responsive speed tests.
 
 ## 👏 Contributing
 
