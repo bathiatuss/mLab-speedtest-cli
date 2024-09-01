@@ -52,6 +52,7 @@ To get started with this project, follow these steps:
 
    ```bash
    npm install -g .
+   cd..
    ```
 
 ## 📋 Usage
