@@ -5,7 +5,8 @@
     <img src="https://www.measurementlab.net/images/home/logos/cloudflare.png" alt="Cloudflare Logo" width="170" style="margin: 10px;"/>
 </div>
 
-# mLab Speed Test CLI
+# mLab Speed Test CLI [![Click for demostration video](https://img.shields.io/badge/Demonstration%20Video-Click%20Here-brightgreen)](mlab-speedtest@1.0.2-demonstration.mp4)
+
 
 **mLab Speed Test CLI** is a Node.js application that provides a command-line interface (CLI) for accessing the Measurement Lab (M-Lab) speed testing system developed by Google Inc. This tool allows users to test their internet speed and view the results.
 
