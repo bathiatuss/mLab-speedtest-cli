@@ -1,6 +1,6 @@
 {
-  "name": "mLab-speedtest-cli",
-  "version": "1.0.2",
+  "name": "mlab-speedtest-cli",
+  "version": "1.1.0",
   "description": "Command-line interface for mLab speed test",
   "main": "main.js",
   "bin": {
@@ -19,5 +19,13 @@
   },
   "devDependencies": {
     "jest": "^29.7.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bathiatuss/mlab-speedtest-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bathiatuss/mlab-speedtest-cli/issues"
+  },
+  "homepage": "https://github.com/bathiatuss/mlab-speedtest-cli#readme"
 }

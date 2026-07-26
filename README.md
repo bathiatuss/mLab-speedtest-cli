@@ -1,170 +1,131 @@
 <div align="center">
     <img src="https://cdn-1.webcatalog.io/catalog/m-lab-speed-test/m-lab-speed-test-icon-filled-256.webp?v=1714775025850" alt="Measurement Lab Logo" width="200" style="margin: 10px;"/>
-    <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" alt="Google Inc." width="200" style="margin: 10px;"/>
+    <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg" alt="Google Logo" width="200" style="margin: 10px;"/>
     <img src="https://nodejs.org/static/images/logo.svg" alt="Node.js Logo" width="200" style="margin: 10px;"/>
     <img src="https://www.measurementlab.net/images/home/logos/cloudflare.png" alt="Cloudflare Logo" width="170" style="margin: 10px;"/>
 </div>
 
-# mLab Speed Test CLI [![Click for demostration video](https://img.shields.io/badge/Demonstration%20Video-Click%20Here-brightgreen)](mlab-speedtest@1.0.2-demonstration.mp4)
+<h1 align="center">mLab Speed Test CLI</h1>
 
+<div align="center">
 
-**mLab Speed Test CLI** is a Node.js application that provides a command-line interface (CLI) for accessing the Measurement Lab (M-Lab) speed testing system developed by Google Inc. This tool allows users to test their internet speed and view the results.
+[![npm version](https://img.shields.io/npm/v/mlab-speedtest-cli.svg)](https://www.npmjs.com/package/mlab-speedtest-cli)
+[![npm downloads](https://img.shields.io/npm/dm/mlab-speedtest-cli.svg)](https://www.npmjs.com/package/mlab-speedtest-cli)
+[![License: Apache-2.0](https://img.shields.io/npm/l/mlab-speedtest-cli.svg)](https://github.com/bathiatuss/mlab-speedtest-cli/blob/main/LICENSE)
+[![Node.js version](https://img.shields.io/node/v/mlab-speedtest-cli.svg)](https://www.npmjs.com/package/mlab-speedtest-cli)
+[![Demonstration Video](https://img.shields.io/badge/Demonstration%20Video-Click%20Here-brightgreen)](https://github.com/bathiatuss/mlab-speedtest-cli/blob/main/mlab-speedtest@1.0.2-demonstration.mp4)
+
+</div>
+
+**mLab Speed Test CLI** is a Node.js command-line tool for testing your internet speed using the [Measurement Lab (M-Lab)](https://www.measurementlab.net/) NDT7 network diagnostic infrastructure, powered by the open-source [`@m-lab/ndt7`](https://www.npmjs.com/package/@m-lab/ndt7) client. M-Lab's platform is a collaborative effort supported by partners including Google and Cloudflare.
 
 ## Contents
 
-- [🎉 Features](#features)
-- [🚀 Installation](#installation)
-- [📋 Usage](#usage)
-- [📝 Commands](#usage)
-- [📜 Upcoming Features](#upcoming-features)
-- [👏 Contributing](#contributing)
-- [📄 License](#license)
-
-## 🎉 Features
-
-*   **Developer-Friendly**  
-    Open source and customizable, tailored for developers seeking flexibility.
-    
-*   **User-Friendly CLI**  
-    Enjoy a simple and intuitive command-line interface for seamless network testing.
-    
-*   **Quick Speed Tests**  
-    Perform fast download and upload speed measurements with minimal configuration.
-    
-*   **Automatic Server Selection**  
-    Effortlessly selects the optimal server for accurate results.
-    
-*   **Flexible Commands**  
-    Use versatile commands to execute different tests and view results.
-    
-*   **Instant Results**  
-    Get immediate feedback on test results directly in the terminal.
+- [🚀 Installation](#-installation)
+- [⚡ Quick Start](#-quick-start)
+- [🎉 Features](#-features)
+- [📋 Usage](#-usage)
+- [📝 Commands](#-commands)
+- [🔧 Developer API](#-need-a-developer-api-or-tui)
+- [👏 Contributing](#-contributing)
+- [📄 License](#-license)
 
 ## 🚀 Installation
 
-To get started with this project, follow these steps:
+Install globally with npm:
 
-1. **Clone the Repository:**
+```bash
+npm install -g mlab-speedtest-cli
+```
 
-   ```bash
-   git clone https://github.com/bathiatuss/mLab-speedtest-cli.git
-   ```
+Or run it directly without installing, using npx:
 
-2. **Navigate to the Project Directory:**
+```bash
+npx mlab-speedtest-cli --run
+```
 
-   ```bash
-   cd mLab-speedtest-cli
-   ```
+## ⚡ Quick Start
 
-3. **Install Dependencies:**
+Once installed globally, run your first speed test:
 
-   ```bash
-   npm install
-   ```
+```bash
+mlab-speedtest --run
+```
 
-4. **Install Globally:**
+That's it — download speed, upload speed, server selection, and latency are tested automatically.
 
-   To make the `mlab-speedtest` command available globally, run:
+## 🎉 Features
 
-   ```bash
-   npm install -g .
-   cd..
-   ```
+*   **User-Friendly CLI**
+    Enjoy a simple and intuitive command-line interface for seamless network testing.
+
+*   **Quick Speed Tests**
+    Perform fast download and upload speed measurements with minimal configuration.
+
+*   **Automatic Server Selection**
+    Effortlessly selects the optimal server for accurate results.
+
+*   **Flexible Commands**
+    Use versatile commands to execute different tests and view results.
+
+*   **Instant Results**
+    Get immediate feedback on test results directly in the terminal.
 
 ## 📋 Usage
 
-You can run the following commands to perform speed test operations from the command line:
+Run any of the commands below from your terminal after installing the package.
 
-### Commands
+## 📝 Commands
 
-- **Help (`--help, -h`):**
+| Command | Alias | Description |
+|---|---|---|
+| `mlab-speedtest --help` | `-h` | Shows available commands and usage instructions |
+| `mlab-speedtest --server` | `-s` | Selects the most efficient server for testing |
+| `mlab-speedtest --download` | `-d` | Tests download speed |
+| `mlab-speedtest --upload` | `-u` | Tests upload speed |
+| `mlab-speedtest --run` | `-r` | Runs a full test: download, upload, server selection, and latency |
+| `mlab-speedtest --results [params]` | `-res [params]` | Displays the latest test results (`params` optional) |
 
-  Shows available commands and usage instructions.
+**Example:**
 
-  ```bash
-  mlab-speedtest --help
-  mlab-speedtest -h
-  ```
+```bash
+mlab-speedtest --results 5
+```
 
-- **Get Server (`--server, -s`):**
+## 🔧 Need a Developer API or TUI?
 
-  Selects the most efficient server for testing.
-
-  ```bash
-  mlab-speedtest -server
-  mlab-speedtest -s
-  ```
-
-- **Download Test (`--download, -d`):**
-
-  Tests the download speed.
-
-  ```bash
-  mlab-speedtest --download
-  mlab-speedtest -d
-  ```
-
-- **Upload Test (`--upload, -u`):**
-
-  Tests the upload speed.
-
-  ```bash
-  mlab-speedtest --upload
-  mlab-speedtest -u
-  ```
-
-- **Start Test (`--run, -r`):**
-
-  Starts the speed test process for download speed, upload speed, most efficient server and network latency.
-
-  ```bash
-  mlab-speedtest --run
-
-  mlab-speedtest -r
-  ```
-
-- **Show Results (`--results [params], -res [params]`):**
-
-  Displays the latest test results. "params" is optional.
-
-  ```bash
-  mlab-speedtest --results
-
-  mlab-speedtest -res 5
-  ```
-
-## 📜 Upcoming Features
-
-*   **API Integration in v2.0.0**  
-    Version 2.0.0 will introduce an API for developers to retrieve network speed and server data with a single line of code.
-
-*   **Enhanced Performance**  
-    Significant improvements in performance to ensure faster and more efficient testing.
-
-*   **Increased Consistency**  
-    Improved consistency in test results to provide more reliable data across various network conditions.
-
-*   **Faster Test Speeds**  
-    Optimizations to reduce test execution time, enabling quicker and more responsive speed tests.
+> 🚀 **[bathiatuss/mlab-speedtest-tui](https://github.com/bathiatuss/mlab-speedtest-tui)** — Go-based sibling project with a full developer API + terminal UI.
 
 ## 👏 Contributing
 
-To contribute to this project, please follow these steps:
+Contributions are welcome! To contribute:
 
-1. **Fork the Repository and Clone It to Your Local Machine.**
-2. **Create a New Branch:**
+1. **Fork the repository and clone it locally:**
+
+   ```bash
+   git clone https://github.com/bathiatuss/mlab-speedtest-cli.git
+   cd mlab-speedtest-cli
+   npm install
+   ```
+
+2. **Link the package locally to test your changes as the `mlab-speedtest` command:**
+
+   ```bash
+   npm install -g .
+   ```
+
+3. **Create a new branch:**
 
    ```bash
    git checkout -b feature/feature-name
    ```
 
-3. **Make Your Changes and Test Them.**
-4. **Commit Your Changes and Open a Pull Request.**
+4. **Make your changes, test them, then commit and open a pull request.**
 
 ## 📄 License
 
-This project is licensed under the [Apache-2.0 License](LICENSE).
+This project is licensed under the [Apache-2.0 License](https://github.com/bathiatuss/mlab-speedtest-cli/blob/main/LICENSE).
 
 ---
 
-For more information and assistance, you can refer to the project repository or reach out with any issues.
+For more information, visit the [project repository](https://github.com/bathiatuss/mlab-speedtest-cli) or open an [issue](https://github.com/bathiatuss/mlab-speedtest-cli/issues).
